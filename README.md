@@ -58,6 +58,17 @@ app.listen(port, () => {
 })
 ```
 
+## Link of Trailer
+You have to be more careful for pasting the link Address.
+Don't take the link address from different website, becuase It won't work.
+<br>
+Just paste the embed link address from Youtube. here is the location:
+```console
+Youtube -> select a Trailer -> Share -> Embed -> copy the src link and paste it to the input.
+```
+<img width="50%" src="Images/Embed.png">
+
+
 [twitter]: twitter.com/webDeveloper83
 [nodejs]: https://nodejs.org/en/
 [express]: http://expressjs.com/
