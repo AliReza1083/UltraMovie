@@ -27,10 +27,10 @@ The tools that I used to make this Full Responsive Website:
 
 ## How does this website work?
 
-### Installing NODEJS
+### Install NODEJS
 We need `NPM` in order for this Project to work, Without NODEJS -- The project isn't going to work.
 
-### Installing Several files from Package Managers.
+### Install Several files from Package Managers.
 There is no need to Install them separately, I wrote the dependencies for you, Just run this in your terminal, It'll download for you.
 ```console
 $ npm install
