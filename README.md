@@ -45,8 +45,9 @@ when you are finished with installing, then run it with a command such as:
 $ node app.js
 ```
 
-***** My app.js is the main file that you must run this file in order to see the Website *****
 ## app.js
+
+***** My app.js is the main file that you must run this file in order to see the Website *****
 ```js
 const express = require('express');
 const app = express();
