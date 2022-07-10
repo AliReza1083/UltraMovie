@@ -28,7 +28,7 @@ The tools that I used to make this Full Responsive Website:
 ## How does this website work?
 
 ### Navbar
-<img align="left" alt="Navbar" src="Navbar.png" width="50%">
+<img align="left" alt="Navbar" src="Images/Navbar.png" width="50%">
 
 
 
