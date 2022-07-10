@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head -->
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="./addmovie.css">
+</head>
+<body>
+    <!-- navbar -->
+    <%- include('partials/navbar') %> 
+
+    <section>
+        <form id="form" action="/addmovie" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Movie name" autocomplete="off" autocomplete="off" required>
+            <label for="country">Where is it from?</label>
+            <input type="text" id="country" name="country" placeholder="country" autocomplete="off" required>
+            <label for="year">When was it created?</label>
+            <input type="text" id="year" name="year" placeholder="year" autocomplete="off" required>
+            <label for="image">Image</label>
+            <input type="url" id="image" name="img" placeholder="imgUrl" autocomplete="off" required>
+            <label for="trailer">Trailer</label>
+            <input type="url" id="trailer" name="trailer" placeholder="https://www.youtube.com/embed/Z1BCujX3pw8" autocomplete="off" required>
+            <textarea name="details" cols="30" rows="10" autocomplete="off" required placeholder="Detail about Your MOIVE"></textarea>
+            <button>Add</button>
+        </form>
+    </section>
+
+    <!-- js codes -->
+    <%- include('partials/js') %> 
+</body>
+</html>

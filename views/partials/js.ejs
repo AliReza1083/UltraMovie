@@ -1,0 +1,36 @@
+<script>
+    const navbar = document.querySelector('nav');
+    const section = document.querySelector('section');
+
+    navbar.addEventListener('mouseover', e => {
+        mouseover(navbar, 'grayscale(100%)', '.5');
+    })
+    section.addEventListener('mouseover', e => {
+        mouseover(section, 'grayscale(0%)', '1');
+
+    })
+    const mouseover = (element, filter, opacity) => {
+        section.style.filter = filter;
+        section.style.opacity = opacity;
+    }
+
+    const show = document.querySelector('.fa-bars');
+    show.addEventListener('click', e => {
+        const navAtt = navbar.getAttribute('data-show');
+        if (navAtt == 'false') {
+            navbar.setAttribute('data-show', true);
+            show.classList.add('fa-bars--move');
+            sectionStyle('grayscale(100%)', 'translateX(50px)', '.5')
+        } else {
+            navbar.setAttribute('data-show', false);
+            show.classList.remove('fa-bars--move');
+            sectionStyle('grayscale(0%)', 'translateX(0px)', '1')
+        }
+    })
+
+    const sectionStyle = (filter, transform, opacity) => {
+        section.style.filter = filter;
+        section.style.transform = transform;
+        section.style.opacity = opacity;
+    }
+</script>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head -->
+    <%- include('partials/head') %> 
+    <style>
+
+        iframe {
+            width: 100%;
+            height: 250px;
+        }
+
+        #trailer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+        }
+        #trailer > div {
+            position: relative;
+            background-color: #2F2F2F;
+            border-radius: .5em;
+            animation: containerEntry 1s;
+            overflow: hidden;
+        }
+        @keyframes containerEntry {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #trailer > div::after {
+            content: '';
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            transition: .3s;
+            z-index: -1;
+        }
+        #trailer > div:hover::after {
+            width: 100%;
+            animation: intro 2s;
+        }
+
+        @keyframes intro {
+            0% {
+                background-color: rgba(255, 255, 255, 0.49);
+                z-index: 0;
+            }
+            25% {
+                background-color: transparent;
+            }
+        }
+
+        #trailer img {
+            width: 50px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 0 50% 50% 0;
+        }
+
+        #trailerInformation {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+        #trailerInformation h1 {
+            font-size: 1.2em;
+        }
+
+        #trailerExtra {
+            width: 100%;
+            padding: 0 1em;
+        }
+        #trailerExtra div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: #727272;
+        }
+
+        #trailer a {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            color: inherit;
+            text-decoration: none;
+            background-color: #A97E00;
+            display: inline-block;
+            padding: .5em 1em;
+            margin-top: 1em;
+            border-radius: .5em;
+            display: none;
+        }
+
+        #trailer > div:hover a {
+            display: block;
+            animation: linkComing .3s;
+        }
+        @keyframes linkComing {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+
+        @media (max-width: 992px) {
+            #trailer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #trailerInformation h1 {
+                font-size: 1em;
+            }
+            #trailerExtra div p {
+                font-size: .7em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            iframe {
+                height: 150px;
+            }
+            #trailer {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #trailerInformation {
+                gap: .1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <%- include('partials/navbar') %> 
+
+
+    <!-- searchbox and movies -->
+    <section id="trailer">
+        <% for (let movie of movieData) { %>
+            <% if (movie.trailer)  {%>
+                <div>
+                    <iframe src="<%= movie.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+                    <div id="trailerInformation">
+                        <img src="<%= movie.img %> " alt="">
+                        <div id="trailerExtra">
+                            <h1><%= movie.name %> </h1>
+                            <div>
+                                <p><i class="fa-solid fa-earth-africa"></i> <%= movie.country %> </p>
+                                <p><i class="fa-solid fa-calendar"></i> <%= movie.year %> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/movies/<%= movie.id %> ">See More</a>
+                </div>
+            <% } %> 
+        <% } %> 
+    </section>
+
+
+    <!-- js codes -->
+    <%- include('partials/js') %> 
+</body>
+</html>

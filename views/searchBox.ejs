@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head -->
+    <%- include('partials/head') %> 
+</head>
+<body>
+    
+    <!-- navbar -->
+    <%- include('partials/navbar') %> 
+
+
+    <!-- searchbox and movies -->
+    <section id="section">
+        <form action="/movies/search" method="get" id="search">
+            <input type="text" name="q" placeholder="Search" autocomplete="off">
+        </form>
+        <% for (let movie of movieData) { %> 
+            <% if (movie.img && movie.name) {%>
+                <div id="movies">
+                    <div id="img">
+                        <img src="<%= movie.img %>" alt="">
+                    </div>
+                    <div id="information">
+                        <h1><%= movie.name %> </h1>
+                        <div id="extraInformation">
+                            <p><i class="fa-solid fa-earth-africa"></i> <%= movie.country %> </p>
+                            <p><i class="fa-solid fa-calendar"></i> <%= movie.year %> </p>
+                        </div>
+                        <a href="/movies/<%= movie.id %> ">See More</a>
+                    </div>
+                    <% if (movie.editable) { %>
+                        <a href="/movies/<%= movie.id %>/edit ">Edit</a>
+                    <% } %> 
+                </div>
+            <% } %>
+        <% } %> 
+    </section>
+
+
+    <!-- js codes -->
+    <%- include('partials/js') %> 
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head -->
+    <%- include('partials/head') %> 
+    <style>
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        section h1 {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+            padding-bottom: 5px;
+        }
+        section h2 {
+            margin-bottom: 10px;
+        }
+
+        section ul {
+            padding: 0 50px;
+        }
+        section ul li {
+            line-height: 2;
+        }
+        section p {
+            line-height: 1.5;
+        }
+
+
+        .lineBreak {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+            padding-bottom: 1em;
+        }
+        .lineBreak:last-child {
+            border: none;
+        }
+
+        .lineBreak div {
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            background-color: #2F2F2F;
+            padding: 2px 6px;
+            border-radius: .5em;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: 1px underline #58a6ff;
+        }
+
+
+
+        @media (max-width: 768px) {
+            #logoImg {
+                display: none;
+            }
+
+            section ul {
+                padding: 0 30px;
+            }
+            ul li {
+                font-size: 12px;
+            }
+            section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <%- include('partials/navbar') %> 
+
+
+    <!-- searchbox and movies -->
+    <section>
+        <h1>I'm a Web Developer</h1>
+        <ul>
+            <li>👋 Hi, I’m <span>Ali Reza Samadi</span></li>
+            <li>👀 I’m interested in Coding</li>
+            <li>🌱 I’m currently learning NODEJS</li>
+            <li>📫 Follow me on <a href="https://twitter.com/webDeveloper83">Twitter</a></li>
+        </ul>
+        <div class="lineBreak">
+            <h2>Introduction</h2>
+            <p>My Name is <span>Ali Reza</span>, and it’s been 1.5 years that I’m Coding and has learnt so many things. I know that for the first time, you get overwhelm while Coding, I was just like you, but if you keep going, You’ll get used to it, and you’ll enjoy alot while Coding (LIKE ME hhh). So, I’m here to make it easy for you, and I want you to come with me...</p>    
+        </div>
+
+        <div class="lineBreak">
+            <h2>About this Website</h2>
+            <p>This Website is all about Downloading Movie, but it's fake, I just made it for practising.</p>
+            <p>The tools that I used to make this Full Responsive Website: </p>
+            <div>
+                <ul>
+                    <li>HTML</li>
+                    <li>Pure CSS</li>
+                    <li>JS</li>
+                    <li><a href="https://nodejs.org/en/" target="_blank">NODEJS</a>
+                        <ul>
+                            <li><a href="http://expressjs.com/" target="_blank">Express</a>
+                                <ul>
+                                    <li><a href="http://expressjs.com/en/resources/middleware/method-override.html" target="_blank">Method-Override</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://ejs.co/" target="_blank">EJS</a></li>
+                            <li><a href="https://www.npmjs.com/package/uuid" target="_blank">UUID</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img id="logoImg" src="https://letstalkhair.tv/wp-content/uploads/2019/07/imdb_logo_png_699617.png" alt="" width="200px">
+            </div>
+        </div>
+
+        <div class="lineBreak">
+            <h2>How does this website work?</h2>
+            <p>For more information, please go <a href="#">Here</a> to read how this website works</p>
+        </div>
+    </section>
+
+
+    <!-- js codes -->
+    <%- include('partials/js') %> 
+</body>
+</html>
