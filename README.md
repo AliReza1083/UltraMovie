@@ -30,6 +30,9 @@ The tools that I used to make this Full Responsive Website:
 ### Navbar
 <img align="left" alt="Navbar" src="Images/Navbar.png" width="50%">
 
+The rest is kind of Easy, so there is no need explain it here, but One thing is very important and that is about Trailer.
+
+### Trailer
 
 
 [twitter]: twitter.com/webDeveloper83
