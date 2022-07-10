@@ -22,7 +22,13 @@ The tools that I used to make this Full Responsive Website:
   - [EJS][ejs]
   - [UUID][uuid]
 
+<hr>
 
+
+## How does this website work?
+
+### Navbar
+<img align="left" alt="Navbar" src="Navbar.png" width="50%">
 
 
 
