@@ -27,14 +27,14 @@ The tools that I used to make this Full Responsive Website:
 
 ## How does this website work?
 
-### Navbar
-<img align="left" alt="Navbar" src="Images/Navbar.png" width="50%">
+### Installing NODEJS
+We need `NPM` in order for this Project to work, Without NODEJS -- The project isn't going to work.
 
-<hr>
-
-The rest is kind of Easy, so there is no need explain it here, but One thing is very important and that is about Trailer.
-
-### Trailer
+### Installing Several files from Package Managers.
+There is no 
+```console
+$ npm install
+```
 
 
 [twitter]: twitter.com/webDeveloper83
