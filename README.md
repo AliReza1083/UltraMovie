@@ -76,7 +76,7 @@ Youtube -> select a Trailer -> Share -> Embed -> copy the src link and paste it 
 If You have any question or any problem, You may ask me here or in [Twitter][twitter].
 
 [github]: https://github.com/AliReza1083/UltraMovie
-[twitter]: twitter.com/webDeveloper83
+[twitter]: https://twitter.com/webDeveloper83
 [nodejs]: https://nodejs.org/en/
 [express]: http://expressjs.com/
 [method-override]: http://expressjs.com/en/resources/middleware/method-override.html
