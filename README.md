@@ -38,6 +38,25 @@ $ npm install
 <img width="100%" src="Images/packageJson.png">
 
 
+### After Installing
+when you are finished with installing, then run it with a command such as:
+
+```console
+$ node app.js
+```
+
+***** My app.js is the main file that you must run this file in order to see the Website *****
+## app.js
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`Listening to ${port}`)
+})
+```
+
 [twitter]: twitter.com/webDeveloper83
 [nodejs]: https://nodejs.org/en/
 [express]: http://expressjs.com/
