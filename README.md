@@ -26,3 +26,8 @@ The tools that I used to make this Full Responsive Website:
 
 
 [twitter]: twitter.com/webDeveloper83
+[nodejs]: https://nodejs.org/en/
+[express]: http://expressjs.com/
+[method-override]: http://expressjs.com/en/resources/middleware/method-override.html
+[ejs]: https://ejs.co/
+[uuid]: https://www.npmjs.com/package/uuid
